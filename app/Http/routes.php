@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::get('/phpinfo', function () {
   return phpinfo();
 });
+
+Route::get('/admin', ['middleware' => 'admin:AshleyWebb', function()
+{
+  return 'Hello Ashley.';
+}]);
