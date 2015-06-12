@@ -23,3 +23,8 @@ Route::get('/admin', ['middleware' => 'admin:AshleyWebb', function()
 {
   return 'Hello Ashley.';
 }]);
+
+get('admin/home', ['as' => 'home', function()
+{
+  return 'some view';
+}]);
